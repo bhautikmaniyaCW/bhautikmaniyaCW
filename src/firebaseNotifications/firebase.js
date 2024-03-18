@@ -25,7 +25,7 @@ export const requestForToken = () => {
     return getToken(messaging, { vapidKey: `BNYBSns4rOrN1rDem8RpyczlMDs7zcwrh6r0-DjQORQScbepH4zqMiYYphI--N7DUgXcJtYmYZLLusEsLBRZ4Hk` }) //to authorize send requests to supported web push services
         .then((currentToken) => {
             if (currentToken) {
-                console.log('current token for client: ', currentToken);
+                // console.log('current token for client: ', currentToken);
 
                 if(localStorage.getItem('fcmToken') && currentToken !==localStorage.getItem('fcmToken')){
                     localStorage.setItem('fcmToken', currentToken);

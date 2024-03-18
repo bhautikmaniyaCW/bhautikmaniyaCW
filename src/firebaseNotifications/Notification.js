@@ -6,8 +6,6 @@ const Notifications = () => {
     const [notification, setNotification] = useState({title: '', body: ''});
     const notify = () => toast(<ToastDisplay/>);
 
-// alert("alert")
-
     function ToastDisplay() {
         return (
             <div>
@@ -16,7 +14,6 @@ const Notifications = () => {
             </div>
         );
     };
-
    
 
     useEffect(() => {
@@ -28,7 +25,6 @@ const Notifications = () => {
 
     requestForToken();
     
-    console.log("message", )
     onMessageListener()
         .then((payload) => {
             console.log("payload", payload)
